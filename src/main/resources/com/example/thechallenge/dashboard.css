@@ -1,0 +1,134 @@
+/* Algemene achtergrond */
+.root {
+    -fx-background-color: #0B0F14;
+    -fx-font-family: "Arial";
+}
+
+/* Navigatiebalk */
+.navbar {
+    -fx-background-color: #0E131A;
+    -fx-border-color: transparent transparent #252D3A transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 30 10 30;
+    -fx-spacing: 30;
+    -fx-alignment: center-left;
+}
+
+/* Logo */
+.logo {
+    -fx-background-color: #20B5A6;
+    -fx-text-fill: #071411;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 7 10 7 10;
+    -fx-background-radius: 9;
+}
+
+/* Naam */
+.brand-name {
+    -fx-text-fill: white;
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+}
+
+/* Navigatieknoppen */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+
+/* Actieve navigatieknop */
+.nav-button-active {
+    -fx-background-color: transparent;
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 15px;
+    -fx-border-color: transparent transparent #20B5A6 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* Dashboardtitel */
+.heading {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Ondertitel */
+.subheading {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 15px;
+}
+
+
+/* Algemene achtergrond */
+.root {
+    -fx-background-color: #0B0F14;
+    -fx-font-family: "Arial";
+}
+
+/* Navigatiebalk */
+.navbar {
+    -fx-background-color: #0E131A;
+    -fx-border-color: transparent transparent #252D3A transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 30 10 30;
+    -fx-spacing: 30;
+    -fx-alignment: center-left;
+}
+
+/* Logo */
+.logo {
+    -fx-background-color: #20B5A6;
+    -fx-text-fill: #071411;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 7 10 7 10;
+    -fx-background-radius: 9;
+}
+
+/* Merknaam */
+.brand-name {
+    -fx-text-fill: white;
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+}
+
+/* Navigatieknoppen */
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+
+/* Actieve knop */
+.nav-button-active {
+    -fx-background-color: transparent;
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 15px;
+    -fx-border-color: transparent transparent #20B5A6 transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    -fx-background-color: #0B0F14;
+    -fx-spacing: 8px;
+    -fx-padding: 30px 40px 30px 40px;
+}
+
+/* Dashboardtitel */
+.heading {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Ondertitel */
+.subheading {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 15px;
+}
+
