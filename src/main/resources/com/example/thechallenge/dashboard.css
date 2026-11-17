@@ -1,20 +1,26 @@
-/* Algemene achtergrond */
+/* ALGEMENE INSTELLINGEN */
 .root {
     -fx-background-color: #0B0F14;
     -fx-font-family: "Arial";
 }
 
-/* Navigatiebalk */
+/* NAVIGATIEBALK */
 .navbar {
     -fx-background-color: #0E131A;
     -fx-border-color: transparent transparent #252D3A transparent;
     -fx-border-width: 0 0 1 0;
-    -fx-padding: 10 30 10 30;
+    -fx-padding: 15 35 15 35;
     -fx-spacing: 30;
+    -fx-alignment: center-left;
+    -fx-min-height: 75px;
+    -fx-pref-height: 75px;
+}
+
+.logo-section {
+    -fx-spacing: 10;
     -fx-alignment: center-left;
 }
 
-/* Logo */
 .logo {
     -fx-background-color: #20B5A6;
     -fx-text-fill: #071411;
@@ -24,111 +30,391 @@
     -fx-background-radius: 9;
 }
 
-/* Naam */
 .brand-name {
-    -fx-text-fill: white;
+    -fx-text-fill: #FFFFFF;
     -fx-font-size: 21px;
     -fx-font-weight: bold;
 }
 
-/* Navigatieknoppen */
-.nav-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #8993A2;
-    -fx-font-size: 15px;
-    -fx-cursor: hand;
-}
-
-/* Actieve navigatieknop */
-.nav-button-active {
-    -fx-background-color: transparent;
-    -fx-text-fill: #20B5A6;
-    -fx-font-size: 15px;
-    -fx-border-color: transparent transparent #20B5A6 transparent;
-    -fx-border-width: 0 0 2 0;
-}
-
-/* Dashboardtitel */
-.heading {
-    -fx-text-fill: #E8EDF3;
-    -fx-font-size: 30px;
-    -fx-font-weight: bold;
-}
-
-/* Ondertitel */
-.subheading {
-    -fx-text-fill: #8993A2;
-    -fx-font-size: 15px;
-}
-
-
-/* Algemene achtergrond */
-.root {
-    -fx-background-color: #0B0F14;
-    -fx-font-family: "Arial";
-}
-
-/* Navigatiebalk */
-.navbar {
-    -fx-background-color: #0E131A;
-    -fx-border-color: transparent transparent #252D3A transparent;
-    -fx-border-width: 0 0 1 0;
-    -fx-padding: 10 30 10 30;
+.navigation-section {
     -fx-spacing: 30;
     -fx-alignment: center-left;
 }
 
-/* Logo */
-.logo {
-    -fx-background-color: #20B5A6;
-    -fx-text-fill: #071411;
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-padding: 7 10 7 10;
-    -fx-background-radius: 9;
-}
-
-/* Merknaam */
-.brand-name {
-    -fx-text-fill: white;
-    -fx-font-size: 21px;
-    -fx-font-weight: bold;
-}
-
-/* Navigatieknoppen */
 .nav-button {
     -fx-background-color: transparent;
     -fx-text-fill: #8993A2;
     -fx-font-size: 15px;
     -fx-cursor: hand;
+    -fx-padding: 10 0 10 0;
 }
 
-/* Actieve knop */
+.nav-button:hover {
+    -fx-text-fill: #20B5A6;
+}
+
 .nav-button-active {
     -fx-background-color: transparent;
     -fx-text-fill: #20B5A6;
     -fx-font-size: 15px;
     -fx-border-color: transparent transparent #20B5A6 transparent;
     -fx-border-width: 0 0 2 0;
+    -fx-padding: 10 0 10 0;
 }
 
-/* Dashboard container */
+.user-section {
+    -fx-spacing: 15;
+    -fx-alignment: center-right;
+}
+
+.streak {
+    -fx-background-color: #171F2B;
+    -fx-text-fill: #FFB020;
+    -fx-font-size: 12px;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 20;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 20;
+}
+
+.profile {
+    -fx-background-color: #20B5A6;
+    -fx-text-fill: #071411;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 10 9 10;
+    -fx-background-radius: 50;
+}
+
+/* DASHBOARD CONTAINER */
 .dashboard-container {
     -fx-background-color: #0B0F14;
-    -fx-spacing: 8px;
-    -fx-padding: 30px 40px 30px 40px;
+    -fx-padding: 35 40 25 40;
+    -fx-spacing: 28;
+    -fx-fill-width: true;
 }
 
-/* Dashboardtitel */
+.header-section {
+    -fx-alignment: center-left;
+    -fx-spacing: 20;
+    -fx-min-height: 75px;
+}
+
+.title-section {
+    -fx-spacing: 8;
+    -fx-alignment: center-left;
+    -fx-padding: 5 0 5 0;
+}
+
 .heading {
     -fx-text-fill: #E8EDF3;
     -fx-font-size: 30px;
     -fx-font-weight: bold;
 }
 
-/* Ondertitel */
 .subheading {
     -fx-text-fill: #8993A2;
     -fx-font-size: 15px;
 }
 
+/* DAG / WEEK / MAAND KNOPPEN */
+.period-selector {
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-min-width: 300px;
+    -fx-pref-width: 300px;
+    -fx-max-width: 300px;
+}
+
+.period-button,
+.period-button-active {
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-min-width: 85px;
+    -fx-pref-width: 85px;
+    -fx-max-width: 85px;
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 22px;
+    -fx-border-radius: 22px;
+    -fx-cursor: hand;
+}
+
+.period-button {
+    -fx-background-color: #171F2B;
+    -fx-text-fill: #E8EDF3;
+    -fx-border-color: #252D3A;
+}
+
+.period-button:hover {
+    -fx-text-fill: #20B5A6;
+    -fx-border-color: #20B5A6;
+}
+
+/* ACTIVE BUTTON */
+.period-button-active {
+    -fx-background-color: #17332F;
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 22px;
+    -fx-border-color: #20B5A6;
+    -fx-border-radius: 22px;
+    -fx-padding: 12px 22px;
+    -fx-min-width: 75px;
+    -fx-pref-width: 85px;
+    -fx-max-width: 100px;
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+    -fx-cursor: hand;
+}
+
+.stat-title {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+}
+
+.stat-value {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+}
+
+.stat-comparison {
+    -fx-text-fill: #50C878;
+    -fx-font-size: 14px;
+}
+
+/* ONDERSTE DASHBOARDGEDEELTE */
+.charts-container {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.chart-card,
+.usage-card {
+    -fx-background-color: #121925;
+    -fx-background-radius: 16;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-padding: 22;
+}
+
+.chart-card {
+    -fx-spacing: 15;
+}
+
+.usage-card {
+    -fx-spacing: 18;
+}
+
+.chart-title,
+.usage-title {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+}
+
+/* BAR CHART */
+.chart {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: transparent;
+}
+
+.axis {
+    -fx-tick-label-fill: #8993A2;
+    -fx-tick-label-font-size: 11px;
+}
+
+.axis-line {
+    -fx-stroke: transparent;
+}
+
+.axis-tick-mark {
+    -fx-stroke: transparent;
+}
+
+.chart-bar {
+    -fx-background-radius: 5 5 0 0;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #20B5A6;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #FFB020;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #8993A2;
+}
+
+/* VERBRUIK PER MOMENT VAN DE DAG */
+.usage-breakdown {
+    -fx-spacing: 18;
+}
+
+.usage-row {
+    -fx-spacing: 8;
+}
+
+.usage-row-header {
+    -fx-alignment: center-left;
+}
+
+.usage-label {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 13px;
+}
+
+.usage-percentage {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 13px;
+}
+
+.usage-percentage-highlight {
+    -fx-text-fill: #FFB020;
+    -fx-font-size: 13px;
+}
+
+.usage-progress {
+    -fx-pref-height: 9px;
+    -fx-min-height: 9px;
+    -fx-max-height: 9px;
+    -fx-background-color: transparent;
+}
+
+.usage-progress .track {
+    -fx-background-color: #202936;
+    -fx-background-radius: 10;
+}
+
+.usage-progress .bar {
+    -fx-background-color: #20B5A6;
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+}
+
+.usage-progress-highlight .bar {
+    -fx-background-color: #FFB020;
+}
+
+.usage-description {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+    -fx-wrap-text: true;
+}
+
+/* STATISTIEKEN CONTAINER */
+.stats-container {
+    -fx-spacing: 20px;
+    -fx-alignment: CENTER;
+    -fx-pref-height: 139px;
+    -fx-max-width: Infinity;
+}
+
+/* STATISTIEKKAARTEN */
+.stat-card {
+    -fx-background-color: #121925;
+    -fx-background-radius: 16px;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-padding: 22px;
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-height: 139px;
+    -fx-min-height: 139px;
+    -fx-pref-width: 1px;
+    -fx-max-width: Infinity;
+}
+
+/* CHART PANEL */
+.chart-card {
+    -fx-background-color: #121925;
+    -fx-background-radius: 16px;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-padding: 22px;
+    -fx-spacing: 15px;
+    -fx-alignment: TOP_LEFT;
+}
+
+/* CHART TITLE */
+.chart-title {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* BAR CHART */
+.usage-chart {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.usage-chart .chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.usage-chart .chart-vertical-grid-lines {
+    -fx-stroke: #252D3A;
+}
+
+.usage-chart .chart-horizontal-grid-lines {
+    -fx-stroke: #252D3A;
+}
+
+.usage-chart .axis {
+    -fx-tick-label-fill: #8993A2;
+    -fx-font-size: 11px;
+}
+
+.usage-chart .axis-label {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+}
+
+.usage-chart .default-color0.chart-bar {
+    -fx-bar-fill: #20B5A6;
+}
+
+.usage-chart .chart-legend {
+    -fx-background-color: transparent;
+}
+
+/* CHART LEGEND */
+.chart-legend {
+    -fx-spacing: 25px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.legend-current {
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 12px;
+}
+
+.legend-previous {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+}
