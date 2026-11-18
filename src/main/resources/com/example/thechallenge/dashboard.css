@@ -1,134 +1,270 @@
-/* Algemene achtergrond */
+/* ALGEMENE ACHTERGROND */
 .root {
     -fx-background-color: #0B0F14;
     -fx-font-family: "Arial";
 }
 
-/* Navigatiebalk */
-.navbar {
-    -fx-background-color: #0E131A;
-    -fx-border-color: transparent transparent #252D3A transparent;
-    -fx-border-width: 0 0 1 0;
-    -fx-padding: 10 30 10 30;
-    -fx-spacing: 30;
-    -fx-alignment: center-left;
-}
-
-/* Logo */
-.logo {
-    -fx-background-color: #20B5A6;
-    -fx-text-fill: #071411;
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-padding: 7 10 7 10;
-    -fx-background-radius: 9;
-}
-
-/* Naam */
-.brand-name {
-    -fx-text-fill: white;
-    -fx-font-size: 21px;
-    -fx-font-weight: bold;
-}
-
-/* Navigatieknoppen */
-.nav-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #8993A2;
-    -fx-font-size: 15px;
-    -fx-cursor: hand;
-}
-
-/* Actieve navigatieknop */
-.nav-button-active {
-    -fx-background-color: transparent;
-    -fx-text-fill: #20B5A6;
-    -fx-font-size: 15px;
-    -fx-border-color: transparent transparent #20B5A6 transparent;
-    -fx-border-width: 0 0 2 0;
-}
-
-/* Dashboardtitel */
-.heading {
-    -fx-text-fill: #E8EDF3;
-    -fx-font-size: 30px;
-    -fx-font-weight: bold;
-}
-
-/* Ondertitel */
-.subheading {
-    -fx-text-fill: #8993A2;
-    -fx-font-size: 15px;
-}
-
-
-/* Algemene achtergrond */
-.root {
-    -fx-background-color: #0B0F14;
-    -fx-font-family: "Arial";
-}
-
-/* Navigatiebalk */
-.navbar {
-    -fx-background-color: #0E131A;
-    -fx-border-color: transparent transparent #252D3A transparent;
-    -fx-border-width: 0 0 1 0;
-    -fx-padding: 10 30 10 30;
-    -fx-spacing: 30;
-    -fx-alignment: center-left;
-}
-
-/* Logo */
-.logo {
-    -fx-background-color: #20B5A6;
-    -fx-text-fill: #071411;
-    -fx-font-size: 18px;
-    -fx-font-weight: bold;
-    -fx-padding: 7 10 7 10;
-    -fx-background-radius: 9;
-}
-
-/* Merknaam */
-.brand-name {
-    -fx-text-fill: white;
-    -fx-font-size: 21px;
-    -fx-font-weight: bold;
-}
-
-/* Navigatieknoppen */
-.nav-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #8993A2;
-    -fx-font-size: 15px;
-    -fx-cursor: hand;
-}
-
-/* Actieve knop */
-.nav-button-active {
-    -fx-background-color: transparent;
-    -fx-text-fill: #20B5A6;
-    -fx-font-size: 15px;
-    -fx-border-color: transparent transparent #20B5A6 transparent;
-    -fx-border-width: 0 0 2 0;
-}
-
-/* Dashboard container */
+/* DASHBOARD CONTAINER */
 .dashboard-container {
     -fx-background-color: #0B0F14;
     -fx-spacing: 8px;
     -fx-padding: 30px 40px 30px 40px;
 }
 
-/* Dashboardtitel */
+/* DASHBOARD HEADER */
+.header-section {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 20px;
+}
+
+.title-section {
+    -fx-spacing: 6px;
+    -fx-alignment: CENTER_LEFT;
+}
+
 .heading {
     -fx-text-fill: #E8EDF3;
     -fx-font-size: 30px;
     -fx-font-weight: bold;
 }
 
-/* Ondertitel */
 .subheading {
     -fx-text-fill: #8993A2;
     -fx-font-size: 15px;
 }
 
+/* PERIODE SELECTOR */
+.period-selector {
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.period-button {
+    -fx-background-color: #171F2B;
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 14px;
+    -fx-background-radius: 22px;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 22px;
+    -fx-padding: 9px 18px;
+    -fx-cursor: hand;
+}
+
+.period-button:hover {
+    -fx-text-fill: #20B5A6;
+    -fx-border-color: #20B5A6;
+}
+
+.period-button-active {
+    -fx-background-color: #17332F;
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 22px;
+    -fx-border-color: #20B5A6;
+    -fx-border-radius: 22px;
+    -fx-padding: 9px 18px;
+    -fx-cursor: hand;
+}
+
+/* STATISTICS CARDS */
+.stats-container {
+    -fx-spacing: 20px;
+    -fx-alignment: CENTER;
+}
+
+.stat-card {
+    -fx-background-color: #121925;
+    -fx-background-radius: 16px;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-padding: 22px;
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.stat-title {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.stat-value {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.stat-comparison {
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 12px;
+}
+
+/* CHARTS CONTAINER */
+.charts-container {
+    -fx-alignment: TOP_LEFT;
+    -fx-hgap: 20px;
+}
+
+/* LEFT CHART PANEL */
+.chart-card {
+    -fx-background-color: #121925;
+    -fx-background-radius: 16px;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-padding: 22px;
+    -fx-spacing: 15px;
+    -fx-alignment: TOP_LEFT;
+}
+
+.chart-title {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* BAR CHART */
+.usage-chart {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+.usage-chart .chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.usage-chart .chart-vertical-grid-lines,
+.usage-chart .chart-horizontal-grid-lines {
+    -fx-stroke: #252D3A;
+}
+
+.usage-chart .axis {
+    -fx-tick-label-fill: #8993A2;
+    -fx-font-size: 11px;
+}
+
+.usage-chart .axis-label {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+}
+
+.usage-chart .default-color0.chart-bar {
+    -fx-bar-fill: #20B5A6;
+}
+
+.usage-chart .default-color1.chart-bar {
+    -fx-bar-fill: #8993A2;
+}
+
+.usage-chart .chart-legend {
+    -fx-background-color: transparent;
+}
+
+/* CHART LEGEND */
+.chart-legend {
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.legend-current {
+    -fx-text-fill: #20B5A6;
+    -fx-font-size: 12px;
+}
+
+.legend-previous {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+}
+
+.legend-current-color {
+    -fx-background-color: #20B5A6;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-max-width: 10px;
+    -fx-max-height: 10px;
+    -fx-background-radius: 3px;
+}
+
+.legend-previous-color {
+    -fx-background-color: #8993A2;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+    -fx-max-width: 10px;
+    -fx-max-height: 10px;
+    -fx-background-radius: 3px;
+}
+
+/* RIGHT USAGE PANEL */
+.usage-card {
+    -fx-background-color: #121925;
+    -fx-background-radius: 16px;
+    -fx-border-color: #252D3A;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-padding: 22px;
+    -fx-spacing: 15px;
+    -fx-alignment: TOP_LEFT;
+}
+
+/* USAGE BREAKDOWN */
+.usage-title {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.time-section {
+    -fx-spacing: 8px;
+}
+
+.time-label {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 13px;
+}
+
+.time-percentage {
+    -fx-text-fill: #E8EDF3;
+    -fx-font-size: 13px;
+}
+
+.time-percentage-highlight {
+    -fx-text-fill: #FFAE1F;
+    -fx-font-size: 13px;
+}
+
+.usage-progress {
+    -fx-accent: #20B5A6;
+    -fx-pref-height: 10px;
+    -fx-min-height: 10px;
+    -fx-max-height: 10px;
+}
+
+.usage-progress-highlight {
+    -fx-accent: #FFAE1F;
+    -fx-pref-height: 10px;
+    -fx-min-height: 10px;
+    -fx-max-height: 10px;
+}
+
+.usage-progress .track,
+.usage-progress-highlight .track {
+    -fx-background-color: #1B2430;
+    -fx-background-radius: 10px;
+}
+
+.usage-progress .bar,
+.usage-progress-highlight .bar {
+    -fx-background-radius: 10px;
+}
+
+.usage-description {
+    -fx-text-fill: #8993A2;
+    -fx-font-size: 12px;
+    -fx-wrap-text: true;
+}

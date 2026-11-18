@@ -1,32 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1536.0" styleClass="root" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="com.example.thechallenge.DashboardController" styleClass="root" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <HBox prefHeight="65.0" prefWidth="200.0" spacing="30.0" styleClass="navbar" BorderPane.alignment="CENTER_LEFT">
-         <padding>
-            <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
-         </padding>
-         <children>
-            <Label styleClass="logo" text="W" />
-            <Label styleClass="brand-name" text="WattWijk" />
-            <Button mnemonicParsing="false" styleClass="nav-button-active" text="Verbruik" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="63.0" styleClass="nav-button" text="Buurt" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" styleClass="nav-button" text="Meldingen" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" styleClass="nav-button" text="Instellingen" HBox.hgrow="ALWAYS" />
-         </children></HBox>
+      <fx:include source="navbar.fxml" fx:id="navbar"/>
    </top>
    <center>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" styleClass="dashboard-container" BorderPane.alignment="TOP_LEFT">
+      <VBox spacing="8.0" styleClass="dashboard-container">
          <padding>
             <Insets left="40.0" right="40.0" top="30.0" />
          </padding>
          <children>
-            <Label styleClass="heading" text="Mijn verbruik" />
-            <Label styleClass="subheading" text="Inzicht in je elektriciteitsverbruik, dag voor dag" />
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="header-section">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="title-section" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="heading" text="Mijn verbruik" />
+                        <Label styleClass="subheading" text="Inzicht in je elektriciteitsverbruik, dag voor dag" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="100.0" prefWidth="300.0" styleClass="period-selector" HBox.hgrow="NEVER">
+                     <children>
+                        <Button minWidth="85.0" mnemonicParsing="false" prefWidth="85.0" styleClass="period-button" text="Dag" />
+                        <Button minWidth="85.0" mnemonicParsing="false" prefWidth="85.0" styleClass="period-button-active" text="Week" />
+                        <Button minWidth="85.0" mnemonicParsing="false" prefWidth="85.0" styleClass="period-button" text="Maand" />
+                     </children>
+                  </HBox>
+               </children></HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" styleClass="stats-container">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="stat-card" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label id="weeklyTitleLabel" fx:id="weeklyTitleLabel" styleClass="stat-title" text="VERBRUIK DEZE WEEK" />
+                        <Label id="weeklyUsageLabel" fx:id="weeklyUsageLabel" styleClass="stat-value" text="61,4 kWh" />
+                        <Label id="weeklyComparisonLabel" fx:id="weeklyComparisonLabel" styleClass="stat-comparison" text="8% lager dan vorig week" />
+                     </children></VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="stat-card" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label id="todayTitleLabel" fx:id="todayTitleLabel" styleClass="stat-title" text="VANDAAG TOT NU TOE" />
+                        <Label id="todayUsageLabel" fx:id="todayUsageLabel" styleClass="stat-value" text="9,4 kWh" />
+                        <Label id="monthlyTitleLabel" fx:id="todayComparisonLabel" styleClass="stat-comparison" text="1,8 kWh onder je gemiddelde" />
+                     </children></VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="stat-card" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="monthlyTitleLabel" styleClass="stat-title" text="VERWACHTE KOSTEN DEZE MAAND" />
+                        <Label fx:id="monthlyCostLabel" styleClass="stat-value" text="E118" />
+                        <Label fx:id="monthlyComparisonLabel" styleClass="stat-comparison" text="E22 minder dan vorig maand" />
+                     </children></VBox>
+               </children>
+            </HBox>
+            <GridPane styleClass="charts-container" hgap="20.0">
+               <columnConstraints>
+                  <ColumnConstraints percentWidth="67" hgrow="ALWAYS"/>
+                  <ColumnConstraints percentWidth="33" hgrow="ALWAYS"/>
+               </columnConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" styleClass="chart-card" GridPane.columnIndex="0">
+                     <children>
+                        <Label styleClass="chart-title" text="VERBRUIK PER DAG" />
+                        <BarChart styleClass="usage-chart">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis label="kWh" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="chart-legend">
+                           <children>
+                              <Pane minHeight="10.0" minWidth="10.0" prefHeight="10.0" prefWidth="10.0" styleClass="legend-current-color" />
+                              <Label styleClass="legend-current" text="Dit jaar" />
+                              <Pane minHeight="10.0" minWidth="10.0" prefHeight="10.0" prefWidth="10.0" styleClass="legend-previous-color" />
+                              <Label styleClass="legend-previous" text="Vorig jaar" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="usage-card" GridPane.columnIndex="1">
+                     <children>
+                        <Label styleClass="usage-title" text="VERBRUIK PER MOMENT VAN DE DAG" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="time-section">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="time-label" text="Ochtend (06:00 tot 12:00)" HBox.hgrow="ALWAYS" />
+                                    <Label styleClass="time-percentage" text="22%" />
+                                 </children>
+                              </HBox>
+                              <ProgressBar maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="0.22" styleClass="usage-progress" />
+                           </children></VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="time-section">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="time-label" text="Middag (12:00 tot 18:00)" HBox.hgrow="ALWAYS" />
+                                    <Label styleClass="time-percentage" text="18%" />
+                                 </children>
+                              </HBox>
+                              <ProgressBar maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="0.18" styleClass="usage-progress" />
+                           </children></VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="time-section">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="time-label" text="Avond (18:00 tot 24:00)" HBox.hgrow="ALWAYS" />
+                                    <Label styleClass="time-percentage-highlight" text="47%" />
+                                 </children>
+                              </HBox>
+                              <ProgressBar maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="0.47" styleClass="usage-progress-highlight" />
+                           </children></VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="time-section">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="time-label" text="Nacht (00:00 tot 06:00)" HBox.hgrow="ALWAYS" />
+                                    <Label styleClass="time-percentage" text="13%" />
+                                 </children>
+                              </HBox>
+                              <ProgressBar maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="0.13" styleClass="usage-progress" />
+                           </children></VBox>
+                        <Label styleClass="usage-description" text="Bijna de helft van je stroom gaat 's avonds op. Dat is ook het duurste moment." />
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
          </children>
       </VBox>
    </center>

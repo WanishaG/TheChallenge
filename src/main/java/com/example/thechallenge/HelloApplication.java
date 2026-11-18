@@ -11,9 +11,15 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("dashboard-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("WattWijk");
         stage.setScene(scene);
+        stage.setMaximized(true);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
